@@ -13,7 +13,7 @@
 
 ####################################################################
 #                                                                  #
-#  backup unraid vms copyright 2015-2016, Daniel Jackson (danioj)  #
+# unraid-autovmbackup copyright 2015-2016, Daniel Jackson (danioj) #
 #                                                                  #
 ####################################################################
 
