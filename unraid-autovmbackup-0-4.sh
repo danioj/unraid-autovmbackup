@@ -2,12 +2,12 @@
 
 
 ####################################################################
-#								   #
+#                                                                  #
 # WARNING - PLEASE CONSIDER THIS A WORK IN PROGRESS. I HAVE TESTED #
 # IT ON MY SERVER AND THERE WAS NO ISSUE  BUT THAT DOESNT MEAN IN  #
-# ANY WAY IT IS FREE FROM BUGS/ISSUS SO PLEASE USE AT YOUR OWN 	   #
-# RISK UNTIL IT HAS BEEN TESTED FURTHER - WARNING		   #
-#								   #
+# ANY WAY IT IS FREE FROM BUGS/ISSUES SO PLEASE USE AT YOUR OWN    #
+# RISK UNTIL IT HAS BEEN TESTED FURTHER - WARNING                  #
+#                                                                  #
 ####################################################################
 
 
@@ -287,7 +287,7 @@ start_vm_after_failure="0"
 		if [ "$actually_copy_files" -eq 0 ]; then
 
 	
-			echo "information: actually_copy_files flag is 0. no files will be coppied."
+			echo "information: actually_copy_files flag is 0. no files will be copied."
 
 		
 			# create a variable which tells rsync to do a dry-run.
@@ -298,7 +298,7 @@ start_vm_after_failure="0"
 		elif [ "$actually_copy_files" -eq 1 ]; then
 
 		
-			echo "warning: actually_copy_files is 1. files will be coppied."
+			echo "warning: actually_copy_files is 1. files will be copied."
 
 
 		fi
@@ -433,13 +433,13 @@ start_vm_after_failure="0"
 		if [ "$kill_vm_if_cant_shutdown" -eq 0 ]; then
 
 	
-			echo "warning: kill_vm_if_cant_shutdown is $kill_vm_if_cant_shutdown. vms will be forced to shutdown if a clean shutdown can not be detected."
+			echo "information: kill_vm_if_cant_shutdown is $kill_vm_if_cant_shutdown. vms will not be forced to shutdown if a clean shutdown can not be detected."
 
 
 		elif [ "$actually_copy_files" -eq 1 ]; then
 
 		
-			echo "information: kill_vm_if_cant_shutdown is $kill_vm_if_cant_shutdown. vms will not be forced to shutdown if a clean shutdown can not be detected."
+			echo "warning: kill_vm_if_cant_shutdown is $kill_vm_if_cant_shutdown. vms will be forced to shutdown if a clean shutdown can not be detected."
 
 
 		fi
@@ -465,13 +465,13 @@ start_vm_after_failure="0"
 		if [ "$start_vm_after_backup" -eq 0 ]; then
 
 	
-			echo "warning: start_vm_after_backup is $start_vm_after_backup. vms will be started following successfull backup."
+			echo "information: start_vm_after_backup is $start_vm_after_backup vms will not be started following a successfull backup."
 
 
 		elif [ "$actually_copy_files" -eq 1 ]; then
 
 		
-			echo "information: start_vm_after_backup is $start_vm_after_backup vms will not be started following a successfull backup."
+			echo "warning: start_vm_after_backup is $start_vm_after_backup. vms will be started following successfull backup."
 
 
 		fi
@@ -497,13 +497,13 @@ start_vm_after_failure="0"
 		if [ "$start_vm_after_failure" -eq 0 ]; then
 
 	
-			echo "warning: start_vm_after_failure is $start_vm_after_failure. vms will be started following an unsuccessfull backup."
+			echo "information: start_vm_after_failure is $start_vm_after_failure. vms will not be started following an unsuccessfull backup."
 
 
 		elif [ "$actually_copy_files" -eq 1 ]; then
 
 		
-			echo "information: start_vm_after_failure is $start_vm_after_failure. vms will not be started following an unsuccessfull backup."
+			echo "warning: start_vm_after_failure is $start_vm_after_failure. vms will be started following an unsuccessfull backup."
 
 
 		fi
@@ -950,7 +950,7 @@ start_vm_after_failure="0"
 					new_disk=$(basename $disk)
 
 
-					# check the extension of the disk to ensure only .img disks are coppied.
+					# check the extension of the disk to ensure only .img disks are copied.
 
 					
 					if [ ! "${disk##*.}" == "img" ]; then
