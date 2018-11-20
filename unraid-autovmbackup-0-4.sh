@@ -682,7 +682,7 @@ start_vm_after_failure="0"
 
 			do
 
-				echo "information: clycle $i of $clean_shutdown_checks: waiting $seconds_to_wait seconds before checking if the vm has shutdown"
+				echo "information: cycle $i of $clean_shutdown_checks: waiting $seconds_to_wait seconds before checking if the vm has shutdown"
 
 
 				# wait x seconds based on how many seconds the user wants to wait between checks for a clean shutdown.
